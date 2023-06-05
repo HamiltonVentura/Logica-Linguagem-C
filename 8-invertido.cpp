@@ -6,8 +6,8 @@ main(){
        gets (A);
        n=strlen(A);
        for(j=n-1;i<n;i++){
-       j--; 
-       A[i]=B[j];}
+              j--; 
+              A[i]=B[j];}
        puts(A);
        system("pause");
        }
