@@ -1,5 +1,6 @@
-#include<iostream.h>
+
 #include<stdio.h>
+#include<iostream>
 
 struct cadastro_livro {
     int numero;
@@ -22,10 +23,8 @@ struct cadastro_aluno b[2];
  
 //sumona e não esquecer de salvar como um bamco de dados
 int cadastrosemenu(){
-    cout<<"[1] cadastros aluno";
-    cout<<"[2] cadastros livros";
-    //transporta as outras duas rotinas para seram chamadas aqui;
-    system("pause");
+    printf("[1] cadastros aluno");
+    printf("[2] cadastros livros");   
     return 0;
 }
 
@@ -33,9 +32,9 @@ int cadastrosemenu(){
     int cadastro_aluno(void){
     char ent[32];
     for(int i=0;i<=2;i++){
-        cout<<"\t\t\tdigite o nome do aluno -";
+        printf("digite o nome do aluno -");
         gets (b[i].nome);                            
-        cout<<"\t\t digite o telefone do aluno -";
+        printf("\t\t digite o telefone do aluno -");
         b[i].tel=atoi(gets(ent));
         cout<<" turma -"
         (b[i].turma);
