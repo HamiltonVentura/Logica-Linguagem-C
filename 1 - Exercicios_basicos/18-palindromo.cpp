@@ -1,5 +1,6 @@
-#include <iostream.h>
-
+#include <iostream>
+#include <cstring>
+using namespace std;
 int main()
 {
       char palavra[20];
@@ -22,5 +23,4 @@ int main()
             cout << "Nao eh um palindromo" << endl;
       else
             cout << "Eh um palindromo" << endl;
-      system("pause");
 }

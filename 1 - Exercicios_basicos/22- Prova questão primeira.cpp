@@ -1,4 +1,6 @@
-#include <iostream.h>
+#include <iostream>
+#include <cstdlib>
+using namespace std;
 // prova refeita quest�o 1
 int main()
 {
@@ -30,6 +32,5 @@ int main()
           cin >> p;
      } while (p > 0);
 
-     system("pause");
      return 0;
 }

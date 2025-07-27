@@ -1,5 +1,6 @@
-#include <iostream.h>
-main()
+#include <iostream>
+using namespace std;
+int main(void)
 {
        int a, i;
        system("color 02");

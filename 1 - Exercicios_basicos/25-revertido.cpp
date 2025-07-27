@@ -1,16 +1,21 @@
-#include <iostream.h>
-int main()
-{
+#include <iostream>
+#include <cstring>
+using namespace std;
 
-    char a[10];
-    gets(a);
-    int i, n;
-    n = strlen(a);
-    for (i = 0; i < n; i++)
-    {
+int main() {
+    char a[100];  // buffer maior para evitar overflow
+
+    cout << "Digite uma palavra ou frase: ";
+    cin.getline(a, 100);
+
+    int n = strlen(a);
+    for (int i = 0; i < n; i++) {
         if (a[i] == 'a')
             a[i] = 'b';
     }
-    puts(a);
-    system("pause");
+
+    cout << "String modificada: " << a << endl;
+
+    system("pause");  // só no Windows
+    return 0;
 }

@@ -1,5 +1,6 @@
 
-#include <iostream.h>
+#include <iostream>
+using namespace std;
 int main()
 {
   for (int i = 0; i < 16; i++)
@@ -8,6 +9,5 @@ int main()
     else
       cout << "valor invalido" << endl;
 
-  system("pause");
   return 0;
 }

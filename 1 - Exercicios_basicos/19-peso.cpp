@@ -1,6 +1,8 @@
-#include <iostream.h>
+#include <iostream>
+#include <cstdlib>
+using namespace std;
 
-main()
+int main(void)
 {
    system("color 02");
    int p, m, e;

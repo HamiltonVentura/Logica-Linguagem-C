@@ -1,4 +1,6 @@
-#include <iostream.h>
+#include <iostream>
+#include <cstdlib>
+using namespace std;
 int main(void)
 {
     char letra;
@@ -10,12 +12,11 @@ int main(void)
         cin >> a[i];
     }
     cout << endl;
+
     for (i = 0; i <= 4; i++)
     {
         pmatriz = &a[i];
         cout << *pmatriz << "-" << pmatriz << endl;
     }
-
-    system("pause");
     return 0;
 }

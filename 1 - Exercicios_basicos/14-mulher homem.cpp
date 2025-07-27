@@ -1,6 +1,7 @@
-#include <iostream.h>
+#include <iostream>
+using namespace std;
 
-main()
+ int main(void)
 {
        int a, i, sexo;
        int altura;
@@ -62,6 +63,6 @@ main()
               break;
        }
 
-       system("pause");
+
        return 0;
 }
