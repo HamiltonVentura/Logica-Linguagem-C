@@ -1,7 +1,10 @@
 #include <iostream>
+using namespace std;
+
 int main(void)
 {
-    int codigo, resp;
+    int codigo;
+    int resp;
     resp = 1;
 
     system("color 02");
@@ -17,9 +20,12 @@ int main(void)
         if (codigo == 3)
             cout << "acessado";
     }
+
     else
         cout << "codigo invalido\n";
-    cout << "deseja continuar tecle <1>:" cin >> resp;
+        
+    cout << "deseja continuar tecle <1>:";
+    cin >> resp;
     system("pause");
     return 0;
 }

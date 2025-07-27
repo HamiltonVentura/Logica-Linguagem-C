@@ -1,73 +1,92 @@
-
-#include <stdio.h>
 #include <iostream>
+#include <cstdlib>  // para system("pause")
+#include <string>   // para getline com std::string
+using namespace std;
 
-struct cadastro_livro
-{
+struct cadastro_livro {
     int numero;
     int tel;
-    char nome[23];
-    char autor[34];
-    char doador[32];
+    string nome;
+    string autor;
+    string doador;
 };
 
-struct cadastro_aluno
-{
-    char nome[25];
-    char turma[12];
+struct cadastro_aluno {
+    string nome;
+    string turma;
     int tel;
     int cpf;
-    char end[34];
+    string end;
 };
 
-struct cadastro_livro a[2];
-struct cadastro_aluno b[2];
+cadastro_livro a[2];
+cadastro_aluno b[2];
 
-// sumona e não esquecer de salvar como um bamco de dados
-int cadastrosemenu()
-{
-    printf("[1] cadastros aluno");
-    printf("[2] cadastros livros");
+int cadastrosemenu() {
+    cout << "[1] Cadastros aluno" << endl;
+    cout << "[2] Cadastros livros" << endl;
     return 0;
 }
 
-int cadastro_aluno(void)
-{
-    char ent[32];
-    for (int i = 0; i <= 2; i++)
-    {
-        printf("digite o nome do aluno -");
-        gets(b[i].nome);
-        printf("\t\t digite o telefone do aluno -");
-        b[i].tel = atoi(gets(ent));
-        cout << " turma -"(b[i].turma);
+int cadastro_aluno() {
+    for (int i = 0; i < 2; i++) {
+        cout << "Digite o nome do aluno: ";
+        getline(cin, b[i].nome);
+
+        cout << "Digite o telefone do aluno: ";
+        cin >> b[i].tel;
+        cin.ignore(); // limpa o buffer do enter
+
+        cout << "Digite a turma do aluno: ";
+        getline(cin, b[i].turma);
     }
     system("pause");
     return 0;
 }
 
-int cadastro_livros(void)
-{
-    for (int i = 0; i <= 2; i++)
-    {
-        cout << "entre o nome do livro -";
-        gets(a[i].nome);
-        cout << "entre o autor -"(a[i].autor);
-        cout << "o doador -";
-        (a[i].doador);
+int cadastro_livros() {
+    for (int i = 0; i < 2; i++) {
+        cout << "Entre o nome do livro: ";
+        getline(cin, a[i].nome);
+
+        cout << "Entre o autor: ";
+        getline(cin, a[i].autor);
+
+        cout << "Nome do doador: ";
+        getline(cin, a[i].doador);
     }
     system("pause");
     return 0;
 }
 
-int main()
-{
-    int i;
-    char ent[34];
-    cout << "\t\t\t Menu";
-    cout << "programa biblioteca";
-    cout << "[1]cadastros";
-    cout << "[2] procurar";
+int main() {
+    int opcao;
+
+    cout << "\t\t\tMenu\n";
+    cout << "Programa Biblioteca\n";
+    cout << "[1] Cadastros\n";
+    cout << "[2] Procurar\n";
+    cout << "Escolha uma opcao: ";
+    cin >> opcao;
+    cin.ignore(); // limpar buffer
+
+    if (opcao == 1) {
+        cadastrosemenu();
+        cout << "Digite [1] para aluno ou [2] para livro: ";
+        int escolha;
+        cin >> escolha;
+        cin.ignore();
+
+        if (escolha == 1) {
+            cadastro_aluno();
+        } else if (escolha == 2) {
+            cadastro_livros();
+        } else {
+            cout << "Opcao invalida!" << endl;
+        }
+    } else {
+        cout << "Funcao ainda nao implementada." << endl;
+    }
 
     system("pause");
     return 0;
