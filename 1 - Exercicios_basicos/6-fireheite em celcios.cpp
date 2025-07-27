@@ -1,20 +1,18 @@
-#include <iostream.h>
+#include <iostream>
+using namespace std;
 
-float temp_celcios(float c)
-{
-  float f;
-  f = (9 * c + 160) / 5;
-  cout << "a temperatura em fireheite he:" << f << endl;
-  system("pause");
+float temp_celsius(float c) {
+    return (9 * c + 160) / 5;
 }
 
-int main()
-{
-  system("color 02");
-  float c;
-  cout << "apresente a temperatura em celcios" << endl;
-  cin >> c;
-  temp_celcios(c);
-  return 0;
-  system("pause");
+int main() {
+    system("color 02");
+    float c;
+    cout << "Apresente a temperatura em Celsius: ";
+    cin >> c;
+
+    float f = temp_celsius(c);
+    cout << "A temperatura em Fahrenheit é: " << f << endl;
+
+    return 0;
 }
