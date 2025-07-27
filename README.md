@@ -9,8 +9,9 @@ Este repositório contém exercícios práticos para desenvolver o raciocínio l
 | Exercício      | Descrição                                         | Status       |
 |----------------|--------------------------------------------------|--------------|
 | Exercício 1    | Introdução a variáveis, tipos e operadores em C. | Concluído    |
-| Exercício 2    | Controle de fluxo: condicionais e loops.         | Em desenvolvimento |
-| Exercício 3    | Funções, arrays e ponteiros.                      | Planejado    |
+| Exercício 2    | Controle de fluxo: condicionais e loops.         | Concluído |
+| Exercício 3    | Funções, arrays e ponteiros.                      | Concluído    |
+| Exercício 4    | Grafos.                      | Em desenvolvimento    |
 
 ---
 
