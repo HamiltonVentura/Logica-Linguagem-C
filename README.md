@@ -2,6 +2,15 @@
 
 Este repositório contém exercícios práticos para desenvolver o raciocínio lógico utilizando a linguagem C. O foco é fortalecer conceitos fundamentais da programação estrutural e preparar para desafios mais avançados.
 
+Este repositório contém exercícios práticos feitos durante meus estudos da linguagem C, abordando temas como:
+
+- Operações matemáticas
+- Estruturas condicionais
+- Laços de repetição
+- Vetores e Matrizes
+- Manipulação de Strings
+- Funções
+
 ---
 
 ## Visão Geral dos Exercícios
@@ -21,3 +30,13 @@ Este repositório contém exercícios práticos para desenvolver o raciocínio l
 
 ```bash
 git clone https://github.com/HamiltonVentura/Logica-Linguagem-C.git
+```
+
+## Como executar
+
+Recomendo utilizar o compilador `gcc` ou o ambiente `Code::Blocks`.
+
+Exemplo de compilação via terminal:
+```bash
+gcc nome_do_arquivo.c -o programa
+./programa
