@@ -1,28 +1,31 @@
-#include <iostream.h>
-int main(void)
-{
-    int a[10][4], i, j, nota;
-    cout << "apresentacao das notas" << endl;
-    for (i = 0; i <= 9; i++)
-    {
-        cout << "informe a nota do" << i + 1 << "aluno";
-        for (j = 0; j <= 3; j++)
-        {
-            cout << "nota" << j + 1 << "=";
-            cin >> nota[i][j];
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a[10][4]; // 10 alunos, 4 notas cada
+    int i, j;
+
+    cout << "Apresentação das notas\n";
+
+    // Entrada de dados
+    for (i = 0; i < 10; i++) {
+        cout << "\nInforme as 4 notas do aluno " << i + 1 << ":\n";
+        for (j = 0; j < 4; j++) {
+            cout << "Nota " << j + 1 << ": ";
+            cin >> a[i][j];
         }
     }
-    cout << endl;
 
-    for (i = 0; i <= 9; i++)
-    {
-        cout << "notas do" << i + 1 << "aluno sao";
+    cout << "\n\nNotas dos alunos:\n";
+
+    // Exibição dos dados
+    for (i = 0; i < 10; i++) {
+        cout << "\nAluno " << i + 1 << ": ";
+        for (j = 0; j < 4; j++) {
+            cout << "Nota " << j + 1 << " = " << a[i][j] << "  ";
+        }
     }
-    for (j = 0; j <= 3; j++)
-    {
-        cout << "nota" << i + 1 << "=";
-        cout << nota[i][j];
-    }
-    system("pause");
+
+    cout << "\n";
     return 0;
 }

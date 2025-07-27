@@ -1,32 +1,34 @@
-/* 9.	Escreva um programa que leia um conjunto de 20 n�meros (positivos e negativos), escrevendo-os. A seguir, o programa
- dever� remover os valores negativos e re-escrever o conjunto. Use vetores
-*/
 #include <stdio.h>
 #include <stdlib.h>
-#define tam 10
+#define TAM 10
 
-main()
-{
+int main() {
+    int i, j, vet[TAM] = {1, 2, 3, -4, -5, 3, 2, 59, 10, -1};
+    int vet_res[TAM]; // vetor para armazenar os positivos
 
-  int i, j, vet[tam] = {1, 2, 3, -4, -5, 3, 2, 59, 10}, vet_res[tam];
+    printf("\n\tREMOVER NEGATIVOS DO VETOR\n\n");
 
-  printf("\n\tREMOVER NEGATIVOS DO VETOR\n\n");
-
-  /*  for(i=0;i<tam;i++) {          //Carrega o vetor
-        printf("\nInforme o elemento %d do vetor:  ",i+1);
-        scanf("%d",&vet[i]);
-    } */
-  j = 0;
-  for (i = 0; i < tam; i++) // Retira valores negativos
-    if (vet[i] > 0)
-    {
-      vet_res[j] = vet[i];
-      j++;
+    // Exibe o vetor original
+    printf("Vetor original:\n");
+    for (i = 0; i < TAM; i++) {
+        printf("%d ", vet[i]);
     }
 
-  for (i = 0; i < j; i++) // Imprime vetor sem elementos negativos
-    printf("\nElemento: %d", vet_res[i]);
+    // Remove os negativos
+    j = 0;
+    for (i = 0; i < TAM; i++) {
+        if (vet[i] >= 0) {
+            vet_res[j] = vet[i];
+            j++;
+        }
+    }
 
-  printf("\n\n\n\n");
-  system("pause");
-} // final
+    // Exibe o vetor resultante (sem negativos)
+    printf("\n\nVetor sem elementos negativos:\n");
+    for (i = 0; i < j; i++) {
+        printf("%d ", vet_res[i]);
+    }
+
+    printf("\n\n");
+    return 0;
+}

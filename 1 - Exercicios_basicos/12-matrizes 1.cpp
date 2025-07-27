@@ -1,4 +1,5 @@
-#include <iostream.h>
+#include <iostream>
+using namespace std;
 int main(void)
 {
     float MD[8], SOMA, MEDIA;

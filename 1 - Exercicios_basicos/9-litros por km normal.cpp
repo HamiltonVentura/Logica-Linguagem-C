@@ -1,4 +1,5 @@
-#include <iostream.h>
+#include <iostream>
+using namespace std;
 int main()
 {
 
@@ -11,9 +12,8 @@ int main()
     cin >> velocidade;
 
     distancia = tempo * velocidade;
-    cout << "a distancia he" << distancia << endl;
+    cout << "a distancia e: " << distancia << endl;
     litros_usados = distancia / 12;
     cout << "esse carro faz " << litros_usados << "km por litro";
-    system("pause");
     return 0;
 }

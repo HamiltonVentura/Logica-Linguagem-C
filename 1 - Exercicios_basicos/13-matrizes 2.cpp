@@ -1,9 +1,11 @@
-#include <iostream.h>
+#include <iostream>
+using namespace std;
+
+
 int main(void)
 // leia 10 elementos de uma matriz A do tipo vetor. costruir uma matriz B de mesmo tipo
 // observando a seguinte a seginte lei de forma��o :se o valor do indice for par o val
-// or deve ser multiplicado por
-// 5 sendo impar deve ser somado com 5;
+// or deve ser multiplicado por // 5 sendo impar deve ser somado com 5;
 {
     float A[10], B[10], RESULTADO;
     int I;
@@ -28,6 +30,5 @@ int main(void)
     cout << endl;
     for (I = 0; I <= 9; I++)
         cout << I + 1 << "]=" << B[I] << endl;
-    system("pause");
     return 0;
 }
